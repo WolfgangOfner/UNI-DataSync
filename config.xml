@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataSync>
+<SyncJob>
+<Source>
+C:\Test
+</Source>
+<RootOnly>
+false
+</RootOnly>
+<Exception>
+C:\Test\Exception
+</Exception>
+<Destination>
+D:\Neuer Ordner
+</Destination>
+<Destination>
+D:\Neuer Ordner2
+</Destination>
+<Block>
+<BlockEnabled>
+true
+</BlockEnabled>
+<BlockFileSize>
+0,5
+</BlockFileSize>
+<BlockSize>
+1000
+</BlockSize>
+</Block>
+</SyncJob>
+<Log>
+<LogFile>
+c:\log.txt
+</LogFile>
+<LogSize>
+3
+</LogSize>
+</Log>
+</DataSync>

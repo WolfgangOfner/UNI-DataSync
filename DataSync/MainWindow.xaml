@@ -1,0 +1,35 @@
+﻿<Window x:Name="Data_Sync" x:Class="DataSync.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Wolfgangs Data Sync" Height="525.396" Width="759.204" ResizeMode="NoResize" Loaded="Data_Sync_Loaded" Closing="Data_Sync_Closing">
+    <Grid>
+        <TextBox x:Name="tbSource" HorizontalAlignment="Left" Height="23" Margin="119,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" IsReadOnly="True"/>
+        <Label Content="Source" HorizontalAlignment="Left" Margin="11,35,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnDestination" Content="Add Destination" HorizontalAlignment="Left" Margin="501,215,0,0" VerticalAlignment="Top" Width="112" Click="BtnDestination_Click" IsEnabled="False"/>
+        <Label Content="Destination" HorizontalAlignment="Left" Margin="9,215,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbRootOnly" Content="Root only" HorizontalAlignment="Left" Margin="119,63,0,0" VerticalAlignment="Top" Checked="CbRootOnly_Checked" Unchecked="CbRootOnly_Unchecked"/>
+        <Button x:Name="btnException" Content="Add Exception" HorizontalAlignment="Left" Margin="501,93,0,0" VerticalAlignment="Top" Width="112" Click="BtnException_Click" IsEnabled="False"/>
+        <Label Content="Exception" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+        <Menu HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="613">
+            <MenuItem Header="Logging">
+                <MenuItem x:Name="miManageLoggingFile" Header="Manage loging file" Margin="0,0,-40,0" Click="ManageLoggingFile_Click"></MenuItem>
+                <MenuItem x:Name="miShowLogging" Header="Show logging" Click="MiShowLogging_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="miImportConfig" Header="Import Config" Click="MiImportConfig_Click"></MenuItem>
+            <MenuItem x:Name="miShowJobs" Header="Show Jobs" Click="MiShowJobs_Click"></MenuItem>
+        </Menu>
+        <Button x:Name="btnAddEntry" Content="Add Entry" HorizontalAlignment="Left" Margin="105,455,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="BtnAddEntry_Click"/>
+        <Button x:Name="btnSource" Content="Select Source" HorizontalAlignment="Left" Margin="501,35,0,0" VerticalAlignment="Top" Width="112" Click="BtnSource_Click"/>
+        <Button x:Name="btnClearEntry" Content="Clear Entry" HorizontalAlignment="Left" Margin="185,455,0,0" VerticalAlignment="Top" Width="75" Click="BtnClearEntry_Click" IsEnabled="False"/>
+        <Button x:Name="btnStartSync" Content="Start Sync" HorizontalAlignment="Left" Margin="345,455,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="BtnStartSync_Click"/>
+        <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="265,455,0,0" VerticalAlignment="Top" Width="75" Click="BtnReset_Click"/>
+        <DataGrid x:Name="dgException" CanUserAddRows="false" HorizontalAlignment="Center" VerticalAlignment="Top" Width="376" Height="105"  ColumnWidth="295" Margin="119,93,258,0" CellEditEnding="DgException_CellEditEnding"/>
+        <DataGrid x:Name="dgDestination" CanUserAddRows="false" HorizontalAlignment="Center" VerticalAlignment="Top" Width="376" Height="105" ColumnWidth="295" Margin="119,215,258,0" PreviewKeyDown="DgDestination_PreviewKeyDown" CellEditEnding="DgDestination_CellEditEnding"/>
+        <Label x:Name="lbBlock" Content="Block monitoring" HorizontalAlignment="Left" Margin="9,335,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbBlock" Content="Activated" HorizontalAlignment="Left" Margin="119,340,0,0" VerticalAlignment="Top" Checked="CbBlock_Checked" Unchecked="CbBlock_Unchecked"/>
+        <Label x:Name="lbFileSize" Content="File size" HorizontalAlignment="Left" Margin="9,361,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbBlockSize" Content="Block size" HorizontalAlignment="Left" Margin="9,387,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbFileSize" HorizontalAlignment="Left" Height="23" Margin="119,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Loaded="TbFileSize_Loaded"/>
+        <TextBox x:Name="tbBlockSize" HorizontalAlignment="Left" Height="23" Margin="119,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Loaded="TbBlockSize_Loaded"/>
+    </Grid>
+</Window>

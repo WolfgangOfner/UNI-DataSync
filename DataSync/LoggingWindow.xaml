@@ -1,0 +1,8 @@
+﻿<Window x:Name="loggingWindow" x:Class="DataSync.LoggingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Logging Window" Height="300" Width="670">
+    <Grid Name="Container">
+        <TextBox x:Name="tbLogging" HorizontalAlignment="Left" TextWrapping="Wrap" Loaded="TbLogging_Loaded" Width="{Binding ElementName=Container,Path=ActualWidth}" ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+    </Grid>
+</Window>
